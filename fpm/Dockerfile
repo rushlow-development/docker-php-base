@@ -1,4 +1,4 @@
-FROM php:8.1-fpm-bullseye
+FROM php:7.4-fpm-bullseye
 
 # Install dependencies
 RUN apt-get update && apt-get install -yqq \
