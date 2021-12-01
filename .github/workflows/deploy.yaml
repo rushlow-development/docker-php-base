@@ -1,6 +1,9 @@
 name: Publish Docker image
 
 on:
+    push:
+        branches:
+            - '7.4'
     release:
         types: [published]
         branches:
@@ -31,7 +34,7 @@ jobs:
               with:
                   context: ./cli
                   push: true
-                  tags: 7.4-cli
+                  tags: ${{ steps.meta.outputs.tags }}-cli
                   labels: ${{ steps.meta.outputs.labels }}
 
             -   name: Build and push Docker FPM image
@@ -39,5 +42,5 @@ jobs:
                 with:
                     context: ./fpm
                     push: true
-                    tags: 7.4-fpm
+                    tags: ${{ steps.meta.outputs.tags }}-fpm
                     labels: ${{ steps.meta.outputs.labels }}
