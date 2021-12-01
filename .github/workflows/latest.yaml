@@ -33,7 +33,7 @@ jobs:
                 with:
                     context: ./cli
                     push: true
-                    tags: latest-${{ env.PHP_VERSION }}-cli
+                    tags: rushlowdev/php-cli:latest-${{ env.PHP_VERSION }}-cli
                     labels: ${{ steps.meta.outputs.labels }}
 
             -   name: Build and push FPM image
@@ -41,5 +41,5 @@ jobs:
                 with:
                     context: ./fpm
                     push: true
-                    tags: latest-${{ env.PHP_VERSION }}-fpm
+                    tags: rushlowdev/php-cli:latest-${{ env.PHP_VERSION }}-fpm
                     labels: ${{ steps.meta.outputs.labels }}
