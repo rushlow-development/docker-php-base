@@ -7,7 +7,7 @@ on:
 
 env:
     PHP_VERSION: '7.2'
-    DOCKER_HUB_REPO: 'rushlowdev/php-cli'
+    DOCKER_HUB_REPO: 'rushlowdev/php'
 
 jobs:
     push_to_registry:
