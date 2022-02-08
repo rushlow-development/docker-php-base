@@ -1,4 +1,4 @@
-FROM php:7.2-cli-bullseye
+FROM php:7.2-cli-buster
 
 # Install dependencies
 RUN apt-get update && apt-get install -yqq \
