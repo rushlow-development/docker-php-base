@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -yqq \
     libcurl4-openssl-dev \
     libxslt1-dev \
     libxslt1.1 \
-    libicu67 \
+    libicu63 \
     libicu-dev \
     libpq-dev \
     chromium \
