@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -yqq \
     libxslt1.1 \
     libicu67 \
     libicu-dev \
-    libpq-dev
+    libpq-dev \
+    libpng-dev
 
 RUN docker-php-ext-install pdo_mysql
 RUN docker-php-ext-install pdo_pgsql
@@ -30,6 +31,7 @@ RUN docker-php-ext-install exif
 RUN docker-php-ext-install soap
 RUN docker-php-ext-install bcmath
 RUN docker-php-ext-install curl
+RUN docker-php-ext-install gd
 
 RUN pecl install xdebug
 
